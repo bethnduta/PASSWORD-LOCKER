@@ -25,3 +25,16 @@ As a user you can:
 * git clone https://github.com/bethnduta/PASSWORD-LOCKER.git
 * cd PASSWORDLOCHER.IP
 * code . based on the text editor you have
+
+## Technologies Used
+* python3.6
+
+## Known Bugs
+Currently no known bugs
+
+## Contact Information
+In case of any further information email me at [bethnduta05@gmail.com]
+
+### License
+* MIT license
+* Copyright (c) 2022
