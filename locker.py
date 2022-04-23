@@ -1,7 +1,7 @@
 import string 
 from random import*
 from password import User
-from password import Credentials
+from password import credentials
 def create_user(firstname,lastname,username,userpassword):
     newuser= User(firstname,lastname,username,userpassword)
     return newuser
@@ -14,16 +14,16 @@ def find_user(number):
 def display_user():
     return User.display_users()
 def create_account(accountusername,accountname,accountpassword):
-    newaccount= Credentials(accountusername, accountname,accountpassword)
+    newaccount= credentials(accountusername, accountname,accountpassword)
     return newaccount
 def save_account(user):
     user.save_account()
 def delete_account(user):
     user.delete_account()
 def find_account(number):
-    return Credentials.find_by_number(number)
+    return credentials.find_by_number(number)
 def display_accounts():
-    return Credentials.display_accounts()
+    return credentials.display_accounts()
 def main():
     while True:
         print("welcome: enter PY or BN to start")
@@ -33,7 +33,7 @@ def main():
             print("create an account")
             print("-"*10)
             print("enter first name...")
-            print(f"Name:{firstname}{lastname} \nUsername: {username}\nPassword: {userpassword}")
+            # print(f"Name:{firstname}{lastname} \nUsername: {username}\nPassword: {userpassword}")
             print("\nUse Login to your account with your details")
             print("\n \n")
 

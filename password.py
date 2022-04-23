@@ -46,7 +46,7 @@ class User:
                 if user.username == number:
                     return True
                     return False
-            class Credentials:
+            class credentials:
                 '''
                 class that generates new instances of credentials
                 '''
@@ -62,7 +62,7 @@ class User:
                         '''
                         save_account method saves user info into accounts
                         '''                           
-                        Credentials.accounts.append(self)
+                        credentials.accounts.append(self)
                         '''
                         save account method saves user info into accounts
                         '''
@@ -70,7 +70,7 @@ class User:
                         '''
                         delete_account method deletes a saved credential from accounts
                         '''
-                        Credentials.accounts.remove(self)
+                        credentials.accounts.remove(self)
                         @classmethod
                         def display_accounts(cls):
                             '''
