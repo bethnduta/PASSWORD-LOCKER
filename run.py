@@ -1,5 +1,5 @@
 import random 
-from password import user
+from password import User
 from ntpath import join
 from random import choice, randint
 import string 
@@ -43,7 +43,7 @@ def main():
 
         elif option == "BN":
             print("username...")
-            loInUsername=input()
+            logInUsername=input()
             print("password...")
             logInPassword=input()
             if find_user(logInPassword):
@@ -56,7 +56,7 @@ def main():
             if choose == "MC":
                 print("add credential account")
                 print("_"*25) 
-                accountusername=loginusername   
+                accountusername=logInUsername   
                 print("Account Name")
                 accountname = input()
                 print("\n")
@@ -79,7 +79,7 @@ def main():
                         print("your credential accounts:")
                         print("_"*25)
                         for user in display_accounts():
-                            print(f"account: {user.accountname}\npassword:{userpassword}\n\n")
+                            print(f"account: {user.accountname}\npassword:{user.accountpassword}\n\n")
                         else:
                             print("incorrect credentials")
             else:
