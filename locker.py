@@ -1,3 +1,4 @@
+from ntpath import join
 import string 
 from random import*
 from password import User
@@ -61,7 +62,7 @@ def main():
                 if decision == "G":
                     characters=string.ascli_letters + string.digits
                     accountpassword = "", join(choice(characters)for x in range(randint(6,16)))
-                    print(f"password: {accountpassword")
+                    print(f"password: {accountpassword}")
                 elif decision == "N":
                     print("enter your password")
                     accountpassword=input()
@@ -70,25 +71,25 @@ def main():
                     save_account(create_account(accountusername, accountname, accountpassword))
                     print("\n")
                     print(f"username:{accountusername} \nAccount Name: {accountname}\npassword: {accountpassword}")
-                elif choose == "TC":
+            elif choose == "TC":
                     if find_account(accountusername):
                         print("your credential accounts:")
                         print("_"*25)
                         for user in display_accounts():
-                            print(f"account: {user.accountname}\npassword: {userpassword}\n\n")
+                            print(f"account: {user.accountname}\npassword:{userpassword}\n\n")
                         else:
                             print("incorrect credentials")
-                        else:
+            else:
                             print("TRY Again")
                             print("\n")
-                        else:
+    else:
                             print("invalid information, please try again! Thankyou")  
                             print("\n")
-                        else:
-                            print("choose a valid option") 
-                            print("\n")      
+                # else:
+                #             print("choose a valid option") 
+                #             print("\n")      
 
-                    if __name__ == '__main__':
+    if __name__ == '__main__':
                         main()                   
 
                        
