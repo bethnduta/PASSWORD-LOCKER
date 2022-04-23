@@ -68,7 +68,28 @@ def main():
                 else:
                     print("put in a valid choice")
                     save_account(create_account(accountusername, accountname, accountpassword))
-                        
+                    print("\n")
+                    print(f"username:{accountusername} \nAccount Name: {accountname}\npassword: {accountpassword}")
+                elif choose == "TC":
+                    if find_account(accountusername):
+                        print("your credential accounts:")
+                        print("_"*25)
+                        for user in display_accounts():
+                            print(f"account: {user.accountname}\npassword: {userpassword}\n\n")
+                        else:
+                            print("incorrect credentials")
+                        else:
+                            print("TRY Again")
+                            print("\n")
+                        else:
+                            print("invalid information, please try again! Thankyou")  
+                            print("\n")
+                        else:
+                            print("choose a valid option") 
+                            print("\n")      
+
+                    if __name__ == '__main__':
+                        main()                   
 
                        
 
