@@ -19,5 +19,13 @@ class Testuser(unittest.TestCase):
         def test_delete_user(self):
             ''' 
             test_delete_contact to test if we can remove our contact from our contact list
-            ''' 
-              
+            '''
+            self.new_contact.save_contact()
+            test_user = user("test", "user","071234567","beth@user.com")
+            test_user.save_user()
+
+            self.new_user.delete_user()
+            self.assertEqual(len(user.user_list),1)
+
+        if __name__ == '__main__':
+                  unittest.main()              
