@@ -18,3 +18,27 @@ def main():
 
             print('confirm password')
             confirm_password = input()
+
+            while confirm_password != created_user_password:
+                print("incorrect password")
+                print("enter correct password")
+                created_user_password = input()
+                
+                else:
+                    
+                    print("kudos (created_user_name)! you have successfully created your account")
+                    print('\n')
+                    print("login")
+                    print("username")
+                    entered_username = input()
+                    print("enter your password")
+                    entered_password = input()
+
+                    while entered_username != created_user_name or entered_password !=created_user_password:
+                        print("incorrect username or password")
+                        print("username")
+                        entered_username = input()
+                        print("your password")
+                        entered_password = input()
+
+                        else:
