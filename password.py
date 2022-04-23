@@ -46,6 +46,7 @@ class User:
                 if user.username == number:
                     return True
                     return False
+                    
             class credentials:
                 '''
                 class that generates new instances of credentials
