@@ -75,4 +75,9 @@ def main():
 
                                 elif short_code == 'ex':
                                     break   
-                                else:                         
+                                else: 
+                                    print("enter correct code to continue")
+
+ 
+                        if __name__ == '__main__':
+                            main()                                    
