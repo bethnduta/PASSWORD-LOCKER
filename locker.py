@@ -1,7 +1,7 @@
 import string 
 from random import*
 from password import User
-from password import credentials
+from password import credentials 
 def create_user(firstname,lastname,username,userpassword):
     newuser= User(firstname,lastname,username,userpassword)
     return newuser
@@ -41,6 +41,35 @@ def main():
             print("username...")
             loInUsername=input()
             print("password...")
+            logInPassword=input()
+            if find_user(logInPassword):
+                print("\n")
+                print("you can create multiple account (MC) and also view them (TC)")
+                print("_"*60)
+                print("MC -or- TC")
+                choose = input()
+                print("\n")
+            if choose == "MC":
+                print("add credential account")
+                print("_"*25) 
+                accountusername=logInUsername   
+                print("Account Name")
+                accountname = input()
+                print("\n")
+                print("generate automatic password (G) OR CREATe new password (N)")
+                decision=input()
+                if decision == "G":
+                    characters=string.ascli_letters + string.digits
+                    accountpassword = "", join(choice(characters)for x in range(randint(6,16)))
+                    print(f"password: {accountpassword")
+                elif decision == "N":
+                    print("enter your password")
+                    accountpassword=input()
+                else:
+                    print("put in a valid choice")
+                    save_account(create_account(accountusername, accountname, accountpassword))
+                        
 
+                       
 
 
