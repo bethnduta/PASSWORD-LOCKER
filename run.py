@@ -96,11 +96,12 @@ def main():
                                 print("\n")
                                 
     else:
-                                    print("choose a valid option")
-                                    print("\n")
+        print("choose a valid option")
+                                    
+        print("\n")
 
 if __name__ == '__main__':
-                        main()     
+    main()     
            
                        
 

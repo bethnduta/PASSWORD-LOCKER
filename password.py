@@ -17,7 +17,7 @@ class User:
         '''
         save_user method saves user info into user userslist
         '''
-        User.usersList.append(self)
+        User.UsersList.append(self)
 
     def delete_user(self):
         '''
@@ -25,7 +25,7 @@ class User:
         '''
         User.UsersList.remove(self)
     @classmethod
-    def display_users(cls):
+    def display_user(cls):
         '''
         method that returns info from the userslist
         '''
