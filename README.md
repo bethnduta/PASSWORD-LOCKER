@@ -30,7 +30,7 @@ As a user you can:
 * python3.6
 
 ## Known Bugs
-Currently no known bugs
+Currently no known bugs, in case you know how to set the pyperclip for this project kindly clone the project https://github.com/bethnduta/PASSWORD-LOCKER.git and make the changes, I'll appreciate
 
 ## Contact Information
 In case of any further information email me at [bethnduta05@gmail.com]
