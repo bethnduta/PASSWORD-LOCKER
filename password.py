@@ -1,8 +1,10 @@
+import random
+import string
 class User:
     '''
     class that generates new instances of users
     '''
-    UserList = []
+    UsersList = []
     def __init__(self,firstname,lastname,username,password):
         '''
         __init__method that helps us define properties for our objectself
@@ -21,19 +23,19 @@ class User:
         '''
         delete_user method deletes a saved user from the userslist
         '''
-        User.UserList.remove(self)
+        User.UsersList.remove(self)
     @classmethod
     def display_users(cls):
         '''
         method that returns info from the userslist
         '''
-        return cls.UserList  
+        return cls.UsersList  
     @classmethod
     def find_by_number(cls,number):
         '''
         method that takes in a username and returns a user that matches that number
         '''
-        for user in cls.UserList:
+        for user in cls.UsersList:
             if user.password == number:
                 return user
         @classmethod

@@ -1,3 +1,6 @@
+import random
+import string
+
 class Credentials:
                 '''
                 class that generates new instances of credentials

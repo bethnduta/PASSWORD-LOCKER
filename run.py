@@ -1,7 +1,5 @@
-from ntpath import join
-import random
-import string 
-from password import User
+import string
+from random import * 
 from password import User
 from locker import Credentials 
 def create_user(firstname,lastname,username,userpassword):
@@ -13,7 +11,7 @@ def delete_user(user):
     user.delete_user()
 def find_user(number):
     return User.find_by_number(number)
-def display_user():
+def display_users():
     return User.display_users()
 def create_account(accountusername,accountname,accountpassword):
     newaccount= Credentials(accountusername, accountname,accountpassword)
@@ -35,7 +33,17 @@ def main():
             print("create an account")
             print("-"*10)
             print("enter first name...")
-            # print(f"Name:{firstname}{lastname} \nUsername: {username}\nPassword: {userpassword}")
+            firstname = input()
+            print("enter last name")
+            lastname = input()
+            print("create username")
+            username=input()
+            print("create password")
+            userpassword=input()
+            save_user(create_user(firstname,lastname,username,userpassword))
+            print("account createdv successfully. your details:")
+            print("_"*10)
+            print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}")
             print("\nUse Login to your account with your details")
             print("\n \n")
 
@@ -62,7 +70,7 @@ def main():
                 decision=input()
                 if decision == "G":
                     characters=string.ascli_letters + string.digits
-                    accountpassword = "", join(random.choice(characters)for x in range(random.randint(6,16)))
+                    accountpassword = "", join(choice(characters)for x in range(randint(6,16)))
                     print(f"password: {accountpassword}")
                 elif decision == "N":
                     print("enter your password")
@@ -83,16 +91,17 @@ def main():
             else:
                             print("TRY Again")
                             print("\n")
+        else:
+                                print("incorrect information")
+                                print("\n")
+                                
     else:
-                            print("invalid information, please try again! Thankyou")  
-                            print("\n")
-                # else:
-                #             print("choose a valid option") 
-                #             print("\n")      
+                                    print("choose a valid option")
+                                    print("\n")
 
-    if __name__ == '__main__':
-                        main()                   
-
+if __name__ == '__main__':
+                        main()     
+           
                        
 
 

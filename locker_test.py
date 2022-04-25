@@ -3,6 +3,11 @@ from locker import Credentials
 
 class TestCredentials(unittest.TestCase):
     def setUp(self):
+        '''
+        set up method to run before each testcase
+
+        '''
+        self.new_user = Credentials("Beth","Nduta","0712345678","beth@gmail.com") # create credentials object
         def test_init(self):
             '''
             test_init test case to test if the object is initialized properly
@@ -20,7 +25,7 @@ class TestCredentials(unittest.TestCase):
             ''' 
             test_delete_contact to test if we can remove our contact from our contact list
             '''
-            self.new_contact.save_contact()
+            self.new_credentials.save_contact()
             test_Credentials = Credentials("test", "credentials","071234567","beth@user.com")
             test_Credentials.save_Credentials()
 
