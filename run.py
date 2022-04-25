@@ -26,7 +26,7 @@ def display_accounts():
     return Credentials.display_accounts()
 def main():
     while True:
-        print("welcome to Password Locker App: enter PY or BN to start")
+        print("welcome to Password Locker App: enter PY(to create account) or BN(to login) to start")
         print("PY -or- BN")
         option =input()
         if option == "PY":
