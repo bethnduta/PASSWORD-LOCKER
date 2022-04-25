@@ -44,7 +44,7 @@ def main():
             print("account createdv successfully. your details:")
             print("_"*10)
             print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}")
-            print("\nUse Login to your account with your details")
+            print("\nYou can Login to your account with your details")
             print("\n \n")
 
         elif option == "BN":
