@@ -4,7 +4,7 @@ class User:
     '''
     class that generates new instances of users
     '''
-    UsersList = []
+    usersList = []
     def __init__(self,firstname,lastname,username,password):
         '''
         __init__method that helps us define properties for our objectself
@@ -17,30 +17,30 @@ class User:
         '''
         save_user method saves user info into user userslist
         '''
-        User.UsersList.append(self)
+        User.usersList.append(self)
 
     def delete_user(self):
         '''
         delete_user method deletes a saved user from the userslist
         '''
-        User.UsersList.remove(self)
+        User.usersList.remove(self)
     @classmethod
-    def display_user(cls):
+    def display_users(cls):
         '''
         method that returns info from the userslist
         '''
-        return cls.UsersList  
+        return cls.usersList  
     @classmethod
     def find_by_number(cls,number):
         '''
         method that takes in a username and returns a user that matches that number
         '''
-        for user in cls.UsersList:
+        for user in cls.usersList:
             if user.password == number:
                 return user
         @classmethod
         def user_exist(cls,number):
-            for user in cls.userslist:
+            for user in cls.usersList:
                 if user.username == number:
                     return True
                     return False
