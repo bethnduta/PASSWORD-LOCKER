@@ -38,8 +38,8 @@ class User:
         for user in cls.usersList:
             if user.password == number:
                 return user
-        @classmethod
-        def user_exist(cls,number):
+    @classmethod
+    def user_exist(cls,number):
             for user in cls.usersList:
                 if user.username == number:
                     return True
